@@ -153,7 +153,7 @@ get '/mandelbrot' do
     x_pixel = 0
     x = x_start
     while x < x_end
-      if y_pixel < height
+      if y_pixel < height and x_pixel < width
         colorVal = mandelbrot2(Complex(x,y))
         #print(colorVal," ",colors[colorVal]," ",x_pixel,",",y_pixel,"\n")
         cp.setRGB(x_pixel,y_pixel,colors[colorVal])
