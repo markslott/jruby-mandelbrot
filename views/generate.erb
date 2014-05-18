@@ -1,0 +1,44 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <title>Ruby Mandelbrot Set Generator</title>
+</head>
+<body>
+    <div>
+        <p>
+            Full picture of set: -2.0. -1.0 scale: 2.5
+            
+            Keep tile size around 20x20 for best effect and scale up the total number of tiles.
+        </p>
+    </div>-0.925    
+    <div id="form_div" class="myform">
+        <h1>Mandelbrot Set Image Generator</h1>
+        <form action="/generate" method="post">
+            <label for="xpos">X POS</label>
+            <input id="xpos" type="text" name="xpos" value="-0.925"/>
+            <br/>
+            <label for="xpos">Y POS</label>
+            <input id="ypos" type="text" name="ypos" value="0.266"/>
+            <br/>
+            <label for="scale">Scale</label>
+            <input id="scale" type="text" name="scale" value="0.032"/>
+            <br/>
+            <label for="xtiles">Number of tiles on X axis</label>
+            <input id="xtiles" type="text" name="xtiles" value="40"/>
+            <br/>
+            <label for="ytiles">Number of tiles on Y axis</label>
+            <input id="ytiles" type="text" name="ytiles" value="30"/>
+            <br/>
+            <label for="xtilesize">width of tile</label>
+            <input id="xtilesize" type="text" name="xtilesize" value="20"/>
+            <br/>
+            <label for="ytilesize">height of tile</label>
+            <input id="ytilesize" type="text" name="ytilesize" value="20"/>
+            <br/>
+            <input type="submit"/>
+        </form>
+    </div>
+    <!-- Insert your content here -->
+</body>
+</html>
