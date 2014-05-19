@@ -6,19 +6,12 @@ require 'java'
 
 set :server, :trinidad
 
-# this is the interesting area of the complex plane
-#x_start = -2.0
-#x_end = 0.5
-#y_start = -1.0
-#y_end = 1.0
-
 ESCAPERADIUS = 2
 
-# set this to higher values and sleep well :)
+
 ITERATIONS = 200
 
 BI = java.awt.image.BufferedImage
-CS = java.awt.color.ColorSpace
 ImgIO = javax.imageio.ImageIO
 
 def mandelbrot2(z)
@@ -141,8 +134,6 @@ get '/mandelbrot' do
   
   cp = BI.new(width, height, BI::TYPE_INT_RGB);
   
-  
-
   y_pixel = 0
   
   x = x_start
@@ -166,9 +157,6 @@ get '/mandelbrot' do
     
   end
 
-  #complex_plane.write("mandelbrot.png")
-  #complex_plane.median_filter(2)
-  #complex_plane.to_blob
   img = java.io.ByteArrayOutputStream.new
   ImgIO.write(cp,"png",img)
   String.from_java_bytes(img.toByteArray)
