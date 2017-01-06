@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '9.1.6.0', :engine => 'jruby', :engine_version => '2.3.1'
+ruby '2.3.1', :engine => 'jruby', :engine_version => '9.1.6.0'
 gem 'sinatra'
 gem 'trinidad'
 gem 'puma'
